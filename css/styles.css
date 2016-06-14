@@ -1,0 +1,11 @@
+body {
+  margin-top: 50px;
+}
+
+#output {
+  display: none;
+}
+
+#dory, #zootopia, #frozen, #dinosaur {
+  display: none;
+}
