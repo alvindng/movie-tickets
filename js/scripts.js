@@ -5,7 +5,7 @@ function Cart (movie, showtime) {
   this.showtime = showtime;
   // this.age = age;
   this.tickets = [];
-  this.price;
+  this.totalPrice;
   // this.theater = theater;
   // this.seat = seat;
 }
@@ -17,8 +17,8 @@ Cart.prototype.totalCost = function() {
   for(i = 0; i < this.tickets.length; i++) {
     sum += this.tickets[i];
   }
-  this.price = sum;
-  console.log(this.price);
+  this.totalPrice = sum;
+  console.log(this.totalPrice);
 };
 
 Ticket.prototype.priceCalc = function() {
@@ -55,8 +55,8 @@ $(document).ready(function(){
       newTicket = newTicket.priceCalc();
       newCart.tickets.push(newTicket);
     });
-    console.log(newCart);
 
+    console.log(newCart);
     newCart.totalCost();
     console.log(newCart);
   });
